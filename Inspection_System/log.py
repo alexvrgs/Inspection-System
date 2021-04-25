@@ -193,7 +193,14 @@ class Config_Win():
         else:
             self.lblVideoCam = Label(self.cameraFrame, bg = 'black', width = 20, height = 5)
             self.lblVideoCam.grid(column = 1, row = 2, padx = 5, pady = 5)   
-        
+
+        # > Video Rec Time
+        self.lblVideoTime = Label(self.cameraFrame, text = 'Video Rec Time(secs)', font = ('Helvetica', 10), bg = 'white')
+        self.lblVideoTime.grid(column = 2, row = 1, padx = 5, pady = 5)
+
+        self.comboVideoT = ttk.Combobox(self.cameraFrame, width = 25, state = 'readonly')
+        self.comboVideoT.grid(column = 2, row = 2, padx = 5, pady = 5)
+
         # Buttons Save / Cancel
         self.btnSave = Button(self.btnFrame, text = 'Save', width = 20, font = ('Helvetica', 10), bg = 'white')
         self.btnSave.grid(column = 0, row = 0, padx = 10, pady = 5)
